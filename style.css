@@ -1,0 +1,238 @@
+/*
+  Beginner note:
+  Change the main text here, update colours in the :root block,
+  and adjust spacing by changing the margin and padding values below.
+*/
+
+:root {
+  --cream: #f9f3ea;
+  --blue-900: #1f3f5f;
+  --blue-700: #3e6d8d;
+  --blue-200: #dfeaf5;
+  --sky-soft: #edf6ff;
+  --card-white: #ffffff;
+  --text-dark: #1a2430;
+  --muted: #5a6976;
+  --yellow-soft: #fff4bf;
+  --green-soft: #dff5d8;
+  --orange-soft: #f8dcc2;
+  --focus-ring: #0f5d7a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(180deg, var(--cream) 0%, #edf4fb 100%);
+  color: var(--text-dark);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ a {
+  color: var(--blue-900);
+  text-decoration: underline;
+}
+
+ a:hover,
+ a:focus-visible {
+  color: var(--blue-700);
+}
+
+ a:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.site-header {
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(31, 63, 95, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+}
+
+.main-nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-links a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-badge {
+  text-align: right;
+  padding-left: 1rem;
+}
+
+.contact-name {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--blue-900);
+}
+
+.contact-badge a {
+  font-size: 0.95rem;
+  color: var(--blue-700);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.hero {
+  background: var(--sky-soft);
+  border: 1px solid rgba(31, 63, 95, 0.15);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--blue-700);
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 26px;
+  color: var(--blue-900);
+}
+
+.hero-text p:last-child {
+  max-width: 650px;
+  font-size: 1.1rem;
+}
+
+.content-section {
+  margin: 2.5rem 0;
+}
+
+.about-box,
+.project-card,
+.skill-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(31, 63, 95, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(31, 63, 95, 0.08);
+}
+
+.about-box {
+  padding: 1.5rem 2rem;
+}
+
+.skills-grid,
+.projects-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.skills-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.skill-card {
+  padding: 1.5rem;
+}
+
+.skill-yellow {
+  background: var(--yellow-soft);
+}
+
+.skill-green {
+  background: var(--green-soft);
+}
+
+.skill-orange {
+  background: var(--orange-soft);
+}
+
+.projects-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-card {
+  padding: 1.5rem;
+}
+
+.project-name {
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.project-card ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.contact-section {
+  padding-bottom: 2rem;
+}
+
+.contact-section a {
+  font-weight: 700;
+}
+
+/*
+  Beginner note:
+  Mobile layout changes here for smaller screens.
+  Adjust the gap and widths to change spacing on phones.
+*/
+@media (max-width: 780px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-badge {
+    align-self: flex-end;
+    text-align: right;
+    padding-left: 0;
+  }
+
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 2rem 1.25rem;
+  }
+}
